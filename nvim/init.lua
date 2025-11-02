@@ -25,7 +25,6 @@ vim.opt.shiftwidth      = 4
 vim.g.barbar_auto_setup = false
 
 vim.opt.guicursor       = {
-	--配置nvim的光标样式
 	"i:ver25",
 	"a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor",
 }

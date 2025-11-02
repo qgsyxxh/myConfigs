@@ -1,13 +1,16 @@
-vim.lsp.config("lua_ls", {})
-vim.lsp.config("clangd", {})
-vim.lsp.config("ts_ls", {})
-vim.lsp.config("vue_ls", {})
-vim.lsp.config("rust_analyzer", {})
-vim.lsp.config("tailwindcss", {})
+local config = vim.lsp.config
+local enable = vim.lsp.enable
 
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("clangd")
-vim.lsp.enable("ts_ls")
-vim.lsp.enable("vue_ls")
-vim.lsp.enable("rust_analyzer")
-vim.lsp.enable("tailwindcss")
+config("lua_ls", {})
+config("clangd", {})
+config("ts_ls", {})
+config("vue_ls", {})
+config("rust_analyzer", {})
+config("tailwindcss", {})
+
+enable("lua_ls")
+enable("clangd")
+enable("ts_ls")
+enable("vue_ls")
+enable("rust_analyzer")
+enable("tailwindcss")

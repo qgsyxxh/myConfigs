@@ -10,9 +10,8 @@ require("nvim-tree").setup()
 
 require("telescope").setup()
 
--- 使用leetcode.nvim
 require("leetcode").setup({
-	cn = { -- leetcode.cn
+	cn = {
 		enabled = true, ---@type boolean
 		translator = true, ---@type boolean
 		translate_problems = true, ---@type boolean
@@ -26,7 +25,6 @@ require("leetcode").setup({
 	injector = {
 		["cpp"] = {
 			imports = function()
-				-- return a different list to omit default imports
 				return { "#include <stack>", "#include <queue>", "#include <vector>", "#include <string>",
 					"using namespace std;" }
 			end,
@@ -34,7 +32,7 @@ require("leetcode").setup({
 	},
 })
 
-require('conform').setup({ --使用conform插件 保存自动格式化
+require('conform').setup({
 	formatters_by_ft = {
 		lua = {
 			"lua_ls",
@@ -76,7 +74,6 @@ require('conform').setup({ --使用conform插件 保存自动格式化
 	log_level = vim.log.levels.ERROR,
 })
 
---使用autopairs插件（自动补全括号）
 require("nvim-autopairs").setup()
 
 require("dashboard").setup({
@@ -130,20 +127,18 @@ require("notify").setup({
 
 require("noice").setup({
 	lsp = {
-		-- override markdown rendering so that **cmp** and other plugins use **Treesitter**
 		override = {
 			["vim.lsp.util.convert_input_to_markdown_lines"] = true,
 			["vim.lsp.util.stylize_markdown"] = true,
 			["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
 		},
 	},
-	-- you can enable a preset for easier configuration
 	presets = {
-		bottom_search = true,   -- use a classic bottom cmdline for search
-		command_palette = true, -- position the cmdline and popupmenu together
-		long_message_to_split = true, -- long messages will be sent to a split
-		inc_rename = false,     -- enables an input dialog for inc-rename.nvim
-		lsp_doc_border = false, -- add a border to hover docs and signature help
+		bottom_search = true,
+		command_palette = true,
+		long_message_to_split = true,
+		inc_rename = false,
+		lsp_doc_border = false,
 	},
 })
 
@@ -174,4 +169,13 @@ require("mason-lspconfig").setup({
 		"rust_analyzer",
 		"tailwindcss"
 	},
+})
+
+require("barbar").setup({
+	animation = false,
+	auto_hide = true
+})
+
+require('lazy').setup({
+	auto_hide = true,
 })
