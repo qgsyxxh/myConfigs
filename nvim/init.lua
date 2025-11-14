@@ -30,7 +30,6 @@ vim.opt.guicursor       = {
 }
 
 require("key-maps")
-require("plugin-setting")
-require("lsps")
+require("lazy").setup("plugins")
 
 vim.cmd('colorscheme catppuccin')

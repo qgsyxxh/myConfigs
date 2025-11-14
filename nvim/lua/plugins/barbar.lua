@@ -5,6 +5,9 @@ return {
 		'nvim-tree/nvim-web-devicons',
 	},
 	init = function() vim.g.barbar_auto_setup = false end,
-	opts = {},
+	opts = {
+		animation = false,
+		auto_hide = true
+	},
 	version = '^1.0.0'
 }
