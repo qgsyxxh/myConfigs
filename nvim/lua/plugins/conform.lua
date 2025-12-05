@@ -8,11 +8,11 @@ return {
 				format_on_save = true
 			},
 			c = {
-				"clangd",
+				"clang-format",
 				format_on_save = true
 			},
 			cpp = {
-				"clangd",
+				"clang-format",
 				format_on_save = true
 			},
 			javascript = {
@@ -23,18 +23,23 @@ return {
 				"ts_ls",
 				format_on_save = true
 			},
-			vue = {
-				"vue_ls",
-				format_on_save = true
-			},
 			rust = {
 				"rust_analyzer",
+				format_on_save = true
+			},
+			go = {
+				"gopls",
 				format_on_save = true
 			}
 		},
 		format_on_save = {
 			timeout_ms = 500,
 			lsp_format = "fallback",
+		},
+		formatters = {
+			["clang-format"] = {
+				prepend_args = { "--style=Google" },
+			},
 		},
 	},
 }

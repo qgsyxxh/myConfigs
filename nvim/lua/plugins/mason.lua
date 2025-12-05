@@ -5,10 +5,10 @@ return {
 			"lua_ls",
 			"clangd",
 			"ts_ls",
-			"vue_ls",
 			"rust_analyzer",
-			"tailwindcss"
-		},
+			"tailwindcss",
+			"gopls",
+		}
 	},
 	dependencies = {
 		{
@@ -21,6 +21,15 @@ return {
 						package_uninstalled = "✗"
 					}
 				}
+			}
+		},
+		{
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
+			opts = {
+				ensure_installed = {
+					"clang-format"
+				},
+
 			}
 		},
 		{
